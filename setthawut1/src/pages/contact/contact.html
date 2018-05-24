@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Total Daily Energy Expenditure
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-input type="text" placeholder="ค่า MBR ของคุณ" [(ngModel)]="bmr"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>การออกกำลังกาย</ion-label>
+        <ion-select [(ngModel)]="exercise">
+          <ion-option value="1">ออกกำลังกายน้อยหรือไม่ออกเลย</ion-option>
+          <ion-option value="2">1-3 ครั้ง/สัปดาห์</ion-option>
+          <ion-option value="3">4-5 ครั้ง/สัปดาห์</ion-option>
+          <ion-option value="4">6-7 ครั้ง/สัปดาห์</ion-option>
+          <ion-option value="5">วันละ 2 ครั้งขึ้นไป</ion-option>
+        </ion-select>
+      </ion-item>
+
+    
+
+      <div padding>
+          <button ion-button block color="danger" (click)="TDEE()">คำนวณเลย</button>
+        </div>
+
+        <ion-card-header>
+          <ion-icon name="ios-list-box-outline" color="danger"></ion-icon> TEDD ของคุณ 
+          <ion-badge >{{tdee |number:'1.2-2'}}</ion-badge>                                        
+         </ion-card-header> 
+
+
+</ion-content>

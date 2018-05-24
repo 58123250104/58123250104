@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Body Mass Index</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-input type="text" placeholder="น้ำหนัก(KG)" [(ngModel)]="weight"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-input type="text" placeholder="ส่วนสูง(CM)" [(ngModel)]="height"></ion-input>
+  </ion-item>
+
+
+  <div padding>
+    <button ion-button block color="danger" (click)="BMI()">คำนวณเลย</button>
+  </div>
+
+  <ion-card-header>
+      <ion-icon name="ios-list-box-outline" color="danger"></ion-icon> ค่า BMI ของคุณ... 
+      <ion-badge >{{bmi |number:'1.2-2'}}</ion-badge>
+     </ion-card-header> 
+
+  <ion-card>     
+    <ion-grid>
+        <ion-row>
+          <ion-col>
+            ค่า BMI  <br><br>18.50 <br>18.50-22.90<br>23-24.90 <br>25-29.90  <br>มากกว่า 30
+          </ion-col>
+          <ion-col>
+            เกณฑ์   <br><br>ผอม  <br>ปกติ         <br>อ้วน 1    <br>อ้วน 2     <br>อ้วน 3
+          </ion-col>
+          <ion-col>
+            เสียงโรค <br><br>มาก  <br>ปกติ         <br>อันตราย 1  <br>อันตราย 2  <br>อันตราย 3
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-card>
+  
+</ion-content>
+
+
+

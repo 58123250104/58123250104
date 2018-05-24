@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Basal Metabolic Rate
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-input type="text" placeholder="น้ำหนัก(KG)" [(ngModel)]="weight"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-input type="text" placeholder="ส่วนสูง(CM)" [(ngModel)]="height"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" placeholder="อายุ(Year)" [(ngModel)]="Age"></ion-input>
+          </ion-item> 
+          
+          <ion-item>
+            <ion-label>เพศ</ion-label>
+            <ion-select [(ngModel)]="gender">
+              <ion-option value="f">ชาย</ion-option>
+              <ion-option value="m">หญิง</ion-option>
+            </ion-select>
+          </ion-item>
+
+          
+
+            <div padding>
+                <button ion-button block color="danger" (click)="BMR()">คำนวณเลย</button>
+              </div>
+
+              <ion-card-header>
+                  <ion-icon name="ios-list-box-outline" color="danger"></ion-icon> BMR ของคุณ <ion-badge >{{bmr |number:'1.2-2'}}</ion-badge><br><br>
+                                                 
+                 </ion-card-header>                          
+</ion-content>
+
